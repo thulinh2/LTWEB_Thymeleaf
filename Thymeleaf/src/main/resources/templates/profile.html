@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>User Profile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- CSS -->
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+<!-- JavaScript -->
+<script th:src="@{/js/bootstrap.js}"></script>
+</head>
+<body>
+	<h1 th:text="#{test.hello}"></h1>
+	<h2>User Profile</h2>
+	<ul>
+		<!-- Duyệt qua toàn bộ danh sách UserProfile -->
+		<li th:each="info : ${profile}">
+			<!-- Lấy key và value từ danh sách --> <span th:text="*{info.key}"></span>
+			: <span th:text="*{info.value}"></span>
+		</li>
+	</ul>
+</body>
+</html>
