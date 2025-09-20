@@ -24,7 +24,7 @@ public class WebMvcConfig implements WebMvcConfigurer{
 	@Bean(name="messageSource")
 	public MessageSource getMessageResource() {
 		ReloadableResourceBundleMessageSource messageResource= new ReloadableResourceBundleMessageSource();
-		messageResource.setBasename("classpath:i18n/messages_vn.properties");
+		messageResource.setBasename("classpath:i18n/messages_vi.properties");
 		messageResource.setDefaultEncoding("UTF-8");
 		return messageResource;				
 	}

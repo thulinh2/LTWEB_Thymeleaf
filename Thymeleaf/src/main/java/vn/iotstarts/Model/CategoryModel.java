@@ -17,4 +17,9 @@ public class CategoryModel {
 		
 	}
 
+	public void setIsEdit(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

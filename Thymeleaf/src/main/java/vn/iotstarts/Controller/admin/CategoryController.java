@@ -37,7 +37,8 @@ public class CategoryController {
 	@GetMapping("add")
 	public String add(ModelMap model) {
 		CategoryModel cateModel = new CategoryModel();
-		cateModel.addAttribute("category", cateModel);
+		cateModel.setIsEdit(false);
+		model.addAttribute("category", cateModel);
 		return "admin/categories/addOrEdit";
 	}
 	@PostMapping("saveOrUpdate")
@@ -71,7 +72,7 @@ public class CategoryController {
 		if(optCategory.isPresent()) {
 			CategoryEntity entity = optCategory.get();
 			BeanUtils.copyProperties(entity, cateModel);
-			cateModel.setIsEit(true);
+			cateModel.setIsEdit(true);
 			model.addAttribute("category", cateModel);
 			return new ModelAndView("admin/categories/addOrEdit", model);
 		}
