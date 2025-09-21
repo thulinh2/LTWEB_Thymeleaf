@@ -39,10 +39,10 @@ public class CategoryAPIController {
 		Optional<Category> category = categoryService.findById(id);
 		if (category.isPresent()) {
 			// return ResponseEntity.ok().body(category.get());
-			return new ResponseEntity<Response>(new Response(true, "Thànhcông", category.get()), HttpStatus.OK);
+			return new ResponseEntity<Response>(new Response(true, "Thành công", category.get()), HttpStatus.OK);
 		} else {
 			// return ResponseEntity.notFound().build();
-			return new ResponseEntity<Response>(new Response(false, "Thấtbại", null), HttpStatus.NOT_FOUND);
+			return new ResponseEntity<Response>(new Response(false, "Thất bại", null), HttpStatus.NOT_FOUND);
 		}
 	}
 

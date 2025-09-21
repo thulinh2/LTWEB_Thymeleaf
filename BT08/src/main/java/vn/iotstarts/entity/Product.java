@@ -40,4 +40,16 @@ public class Product implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "categoryId")
 	private Category category;
+	public void setPrice(Double price) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setImage(String sorageFilename) {
+		// TODO Auto-generated method stub
+		
+	}
+	public String getImage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Header</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<th:block th:fragment="header">
+    <header class="bg-light py-3 mb-4 border-bottom">
+        <div class="container text-center">
+            <!-- Hình của bạn (đặt ảnh trong thư mục static/images) -->
+            <img th:src="@{/images/ltweb.jpg}" alt="Sinh viên" 
+                 class="rounded-circle mb-2" style="width:100px; height:100px;">
+            
+            <!-- Tiêu đề hệ thống -->
+            <h2 class="fw-bold">HỆ THỐNG QUẢN LÝ CATEGORY</h2>
+        </div>
+    </header>
+</th:block>
+</body>
+</html>

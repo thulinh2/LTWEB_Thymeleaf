@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{admin/layout_admin.html}">
+<head>
+    <title>Quản lý Category</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/category.js"></script>
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="container mt-3">
+        <h2>Quản lý Category</h2>
+
+        <!-- Form thêm mới -->
+        <form id="formAddCategory" enctype="multipart/form-data">
+            <input type="text" id="categoryName" name="categoryName" placeholder="Tên category" required>
+            <input type="file" id="icon" name="icon">
+            <button type="submit">Thêm</button>
+        </form>
+
+        <hr>
+
+        <!-- Bảng hiển thị category -->
+        <table border="1" width="100%" id="categoryTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    <th>Icon</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- dữ liệu AJAX đổ vào đây -->
+            </tbody>
+        </table>
+    </div>
+</section>
+</body>
+</html>

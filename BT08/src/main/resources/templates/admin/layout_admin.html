@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Category Management</title>
+    <!-- Bootstrap, CSS, JS... -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <style>
+        header {
+            border-bottom: 2px solid #007bff; /* đường ngang dưới header */
+            padding: 10px 0;
+        }
+
+        main {
+            padding: 20px 0;
+            border-bottom: 2px solid #ccc; /* đường ngang dưới content */
+        }
+
+        footer {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="row">
+        <div class="col">
+            <div th:replace="~{fragments/header :: header}"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="row mt-4">
+            <div class="col mt-5 mb-5">
+                <div layout:fragment="content"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="row">
+        <div class="col">
+            <div th:replace="~{fragments/footer :: footer}"></div>
+        </div>
+    </footer>
+</body>
+</html>

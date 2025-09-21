@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{admin/layout_admin.html}">
+<head>
+    <title>Quản lý Product</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/product.js"></script>
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="container mt-3">
+        <h2>Quản lý Product</h2>
+
+        <!-- Form thêm mới -->
+        <form id="formAddProduct" enctype="multipart/form-data">
+            <input type="text" id="productName" name="productName" placeholder="Tên sản phẩm" required>
+            <input type="number" id="quantity" name="quantity" placeholder="Số lượng" required>
+            <input type="number" step="0.01" id="unitPrice" name="unitPrice" placeholder="Đơn giá" required>
+            <input type="file" id="images" name="images">
+            <textarea id="description" name="description" placeholder="Mô tả"></textarea>
+            <input type="number" step="0.01" id="discount" name="discount" placeholder="Giảm giá">
+            <select id="categoryId" name="categoryId"></select>
+            <button type="submit">Thêm</button>
+        </form>
+
+        <hr>
+
+        <!-- Bảng hiển thị sản phẩm -->
+        <table border="1" width="100%" id="productTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th>Category</th>
+                    <th>Hình ảnh</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- dữ liệu AJAX đổ vào đây -->
+            </tbody>
+        </table>
+    </div>
+</section>
+</body>
+</html>
